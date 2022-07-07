@@ -15,3 +15,15 @@ export const calculateTimer = (time: number): FormatDataType => {
 
   return {hoursFormat, minutesFormat, secondsFormat}
 }
+
+export const getActualTimer = (start: number, pause: number | null): number => {
+  let actualSeconds = 0
+
+  if (pause) {
+    actualSeconds = Math.round((pause - start) / 1000)
+  } else {
+    actualSeconds = Math.round((Date.now() - start) / 1000)
+  }
+
+  return actualSeconds
+}
