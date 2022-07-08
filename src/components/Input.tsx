@@ -6,7 +6,6 @@ type InputProps = {
   setMessage: Dispatch<SetStateAction<string | null>>
 }
 
-
 const Input: FC<InputProps> = ({ setMessage }) => {
   const [orderNumber, setOrderNumber] = useState(0)
   const [value, setValue] = useState("")
@@ -32,7 +31,9 @@ const Input: FC<InputProps> = ({ setMessage }) => {
   }
 
   return (
-    <div className="relative z-30 h-9 sm:h-12 p-1 m-3 mb-5 flex justify-between items-center border-2 rounded-full border-slate-400 opacity-90 bg-slate-300">
+    <div className="relative z-30 h-9 sm:h-12 p-1 m-3 mb-5 flex justify-between 
+    items-center border-2 rounded-full border-slate-400 opacity-90 bg-slate-300"
+    >
       <input
         className="opacity-90 bg-slate-300 w-3/5 outline-none pl-2 text-xs sm:text-base"
         placeholder="Enter tracker name"
@@ -46,7 +47,9 @@ const Input: FC<InputProps> = ({ setMessage }) => {
           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
         </svg>
       </button>}
-      {value?.length > 29 && <strong className=" pr-2 text-xs sm:text-base">30 symbols max</strong>}
+      {value?.length > 29 && <strong className=" pr-2 text-xs sm:text-base">
+        30 symbols max
+      </strong>}
     </div>
   )
 }

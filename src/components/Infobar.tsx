@@ -7,6 +7,7 @@ type InfoBarProps = {
 const InfoBar: FC<InfoBarProps> = ({ message }) => {
   let bgColor = "text-green-700"
   let text = ""
+  
   if (message) {text = message.split("-*-").join(" ")}
   if (message?.includes("-*-has been deleted")) {bgColor = "text-red-700"}
 
