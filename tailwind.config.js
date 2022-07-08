@@ -5,8 +5,7 @@ module.exports = {
     extend: {
       animation: {
         blob: "blob 7s infinite",
-        appear: "appear .5s ease-in",
-        disappear: "disappear .5s"
+        appear: "appear .5s ease-in"
       },
       keyframes: {
         appear: {
@@ -15,14 +14,6 @@ module.exports = {
           },
           "to": {
             transform: "scale(1)",
-          }
-        },
-        disappear: {
-          "from": {
-            transform: "translate(0px, 0px)",
-          },
-          "to": {
-            transform: "translate(-500px, 0px)",
           }
         },
         blob: {
@@ -36,7 +27,7 @@ module.exports = {
             transform: "translate(-20px, 70px) scale(0.7)",
           },
           "100%": {
-            transform: "tranlate(0px, 0px) scale(1.2)",
+            transform: "translate(0px, 0px) scale(1.2)",
           },
         },
       },

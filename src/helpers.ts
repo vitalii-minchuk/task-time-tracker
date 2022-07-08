@@ -1,3 +1,5 @@
+import { TimerType } from "./store/timerStore"
+
 export type FormatDataType = {
   hoursFormat: string
   minutesFormat: string
@@ -26,4 +28,20 @@ export const getActualTimer = (start: number, pause: number | null): number => {
   }
 
   return actualSeconds
+}
+
+export const getOrderNumber = (arr: TimerType[]): number => {
+  const array: Array<number> = []
+
+  arr.forEach((item => {
+    if (item.title.includes("No name tracker #")) {
+      array.push(Number(item.title.slice(-1)))
+    }
+  }))
+
+  for (let index = 1; index < array.length + 2; index++) {
+    if (!array.includes(index)) return index
+  }
+
+  return 1
 }
