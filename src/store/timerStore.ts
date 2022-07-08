@@ -86,7 +86,6 @@ export const useTimerStore = create<TimerStoreType>(localStorageUpdate((set, get
     }
   )},
   correctTimer: (id, correction) => {
-    console.log(correction)
     const { timers } = get()
     set({
       timers: timers.map(timer => ({

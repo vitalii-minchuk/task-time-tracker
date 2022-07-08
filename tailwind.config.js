@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}",],
   theme: {
+    fontFamily: {
+      "orbitron": ["'Orbitron'", "sans-serif"]
+    },
     extend: {
       animation: {
         blob: "blob 7s infinite",
